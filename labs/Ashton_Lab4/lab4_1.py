@@ -1,0 +1,35 @@
+#lab4_1
+#Ashton Hill
+n = []
+n.append(2)
+n.append(4)
+print(n)
+print('\n')
+n.insert(0,0)
+n.insert(1,1)
+n.insert(3,3)
+print(n)
+print('\n')
+n.append(5)
+print(n)
+print('\n')
+n.remove(0)
+print(n)
+print('\n')
+temp1 = n.pop(1)
+print(n,'\n',temp1)
+print('\n')
+temp2 = n.pop(2)
+print(n,'\n',temp2)
+print('\n')
+print("Sum of all removed numbers = ",temp1+temp2)
+print('\n')
+n [0] = 100
+n [-1] = 9.9
+newNum = list(n)
+print(newNum)
+print('\n')
+n.clear()
+print("Original list= ",n,"\nNew list = ",newNum)
+del n
+print('\n')

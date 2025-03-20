@@ -1,3 +1,5 @@
+#lab6_1
+#Ashton Hill
 age = int(input("Please enter your age: "))
 if (age<0):
     print("invalid age.")

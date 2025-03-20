@@ -1,3 +1,5 @@
+#lab6_2
+#Ashton Hill
 users = ["admin","ash","jeff","sun","bob"]
 if users:
     for i in users:

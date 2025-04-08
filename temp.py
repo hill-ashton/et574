@@ -1,2 +1,4 @@
-let = "a"
-print(len(let))
+def sumTwo(a,b):
+    return (a+b)
+
+print(sumTwo(1,3))

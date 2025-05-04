@@ -62,17 +62,44 @@ class Connect4:
       bool: True if the player has won, False otherwise.
     """
     # Check horizontal
-
+    #nested loop to iterate through array(board)
+    for row in range(6):
+        for col in range(4):
+            #start the check in each cell up to the 4th column to avoid checking out of bounds  
+            if (self.board[row][col] == player and
+                self.board[row][col+1] == player and
+                self.board[row][col+2] == player and
+                self.board[row][col+3] == player):
+                return True
 
     # Check vertical
-
+    for col in range(7):
+        for row in range(3):
+            if (self.board[row][col] == player and
+                self.board[row+1][col] == player and
+                self.board[row+2][col] == player and
+                self.board[row+3][col] == player):
+                return True
 
     # Check diagonal (top-left to bottom-right)
-
+    for row in range(3):
+        for col in range(4):
+            if (self.board[row][col] == player and
+                self.board[row+1][col+1] == player and
+                self.board[row+2][col+2] == player and
+                self.board[row+3][col+3] == player):
+                return True
 
     # Check diagonal (bottom-left to top-right)
-
-
+    for row in range(3,6):
+        for col in range(4):
+            if (self.board[row][col] == player and
+                self.board[row-1][col+1] == player and
+                self.board[row-2][col+2] == player and
+                self.board[row-3][col+3] == player):
+                return True
+    
+    #if no win is found
     return False
 
   def play_game(self):
